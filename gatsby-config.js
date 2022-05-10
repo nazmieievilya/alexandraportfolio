@@ -2,5 +2,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-fontawesome-css`,
+
+
+
+  ],
 }
