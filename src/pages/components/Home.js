@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Video from './/../../assets/videos/home.mp4'
-
+import { Link } from 'gatsby'
 const Home = () => {
   return (
    <HeroContainer>
@@ -12,7 +12,7 @@ const Home = () => {
            <HeroItems>
             <HeroH1>CG artist</HeroH1>
             <HeroP>Deal with  digital portraits</HeroP>
-            
+            <LinkW to='/#works' >Check out my works</LinkW>
             
            </HeroItems>
            
@@ -109,4 +109,25 @@ const HeroP = styled.p`
     font-size: clamp(1rem, 3vw, 3rem);
     margin-bottom: 2rem;
  `
+
+
+const LinkW = styled(Link)`
+background: ${({primary}) => (primary ? 'white' : 'black' )};
+    white-space: nowrap;
+    padding: ${ ({big}) => (big ? '16px 40px' : '16px 32px' ) };
+    color:  #fff;
+    font-size: ${ ({big}) => (big ? '20px' : '16px' ) };
+    outline: none;
+    border: none;
+    min-width: 100px;
+    text-decoration: none;
+    transition: 0.3s !important;
+    border-radius: ${({round}) => (round ? '50px' : 'none') };
+
+    &:hover {
+        background: ${({primary}) => (primary ? 'black' : 'white' )};
+        color:  black;
+    }
+
+`
 

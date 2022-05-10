@@ -96,6 +96,7 @@ const WorksWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
   }
   @media screen and (max-width: 768px ) {
+    gap: 0;
     grid-template-columns: 1fr;
   }
 
