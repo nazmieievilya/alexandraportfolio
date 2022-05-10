@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Video from './/../../assets/videos/home.mp4'
-import Link from 'react-scroll/modules/components/Link'
 
 const Home = () => {
   return (
@@ -13,7 +12,7 @@ const Home = () => {
            <HeroItems>
             <HeroH1>CG artist</HeroH1>
             <HeroP>Deal with  digital portraits</HeroP>
-            <Link to='works' >Check out my works</Link>
+            
             
            </HeroItems>
            
