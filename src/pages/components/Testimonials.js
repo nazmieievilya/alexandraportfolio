@@ -54,7 +54,7 @@ const Testimonials = () => {
 
 
   return (
-      <div  id='testimonials' >
+      <div data-aos="fade-right" id='testimonials' >
           <TestimonialsContainer>
         <TopLine>
             Testimonials
@@ -63,12 +63,12 @@ const Testimonials = () => {
         <ContentWrapper>
             <ColumnOne>
             {data.allCommentsJson.edges.map((image, key) => (
-                   <div data-aos="fade-right" ><Comments key={key} src={image.node.img.childImageSharp.fluid.src} /></div>
+                   <Comments key={key} src={image.node.img.childImageSharp.fluid.src} />
                    ))}
             </ColumnOne>
         <ColumnTwo>
             {data.allFile.edges.map((image, key) => (
-                   <div data-aos="fade-left" ><Images key={key} fluid={image.node.childImageSharp.fluid} /></div>
+                   <Images key={key} fluid={image.node.childImageSharp.fluid} />
                    ))}
             </ColumnTwo>
             
@@ -84,12 +84,9 @@ export default Testimonials
 const TestimonialsContainer = styled.div`
     width: 100%;
     padding: 5rem calc((100vw - 1300px) / 2);
-  
-    
 
     @media screen and (max-width: 768px) {
-        padding-top: 1rem;
-        margin: 0;
+        padding: 0rem;
     }
 
 `

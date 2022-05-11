@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import { FiMenu } from '@react-icons/all-files/fi/FiMenu';
-import { FiX } from '@react-icons/all-files/fi/FiX';
+import { FaBars } from '@react-icons/all-files/fa/FaBars';
 import { menuData } from "../../data/MenuData";
 import { useState } from "react";
 
@@ -29,8 +28,7 @@ const Header = () => {
             <> 
                     <div style={StyleShowMenu} >
                     
-                    <CloseButton onClick={() => setShowMenu(prevShowMenu => !prevShowMenu )} >
-                        <FiX />
+                    <CloseButton><h1 onClick={() => setShowMenu(prevShowMenu => !prevShowMenu )} >x</h1>
                     </CloseButton>
                     <MobileMenuList>
                         {menuData.map((item, index) => (
@@ -102,7 +100,7 @@ const NavLinkM = styled(Link)`
 
 `
 
-const Bars = styled(FiMenu)`
+const Bars = styled(FaBars)`
     display: none;
     color: #fff;
 
@@ -135,8 +133,8 @@ const NavMenu = styled.div`
 const CloseButton = styled.div`
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
-    padding-right: 15px;
+    margin-top: -10px;
+    padding-right: 10px;
     top: 0;
     width: 100%;
 
@@ -152,4 +150,9 @@ const MobileMenuList = styled.div`
 
 `
 
+const MobileMenu = styled.div`
 
+    position: fixed;
+
+
+`

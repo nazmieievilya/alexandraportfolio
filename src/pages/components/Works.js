@@ -67,11 +67,10 @@ const Works = () => {
 export default Works
 
 const WorksContainer = styled.div`
-   
+
     min-height: 600px;
     padding: 5rem calc((100vw - 1300px) / 2) ;
     background: #fff;
-    padding-bottom: 0;
     color: red;
 
 `
@@ -88,7 +87,6 @@ const WorksHeading = styled.div`
 `
 
 const WorksWrapper = styled.div`
-  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
