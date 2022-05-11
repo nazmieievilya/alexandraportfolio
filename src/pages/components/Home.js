@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Video from './/../../assets/videos/home.mp4'
 import { Link } from 'gatsby'
+
+
 const Home = () => {
+    
   return (
-   <HeroContainer>
+   <HeroContainer id='home' >
        <HeroBg>
            <VideoBg src={Video} autoPlay loop muted playsInline type="video/mp4"   />
        </HeroBg>

@@ -16,7 +16,7 @@ const Contact = () => {
        
 
   return (
-      <div data-aos="fade-up" >
+      <div data-aos="fade-up" id='contact' >
              <ContactContainer>
        <ContactBackground>
             <ContactContent>

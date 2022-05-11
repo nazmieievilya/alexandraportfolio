@@ -54,7 +54,7 @@ const Testimonials = () => {
 
 
   return (
-      <div data-aos="fade-right" >
+      <div data-aos="fade-right" id='testimonials' >
           <TestimonialsContainer>
         <TopLine>
             Testimonials

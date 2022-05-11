@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import { FaBars } from '@react-icons/all-files/fa/FaBars';
+import { FaBars, FaClose } from '@react-icons/all-files/fa/FaBars';
 import { menuData } from "../../data/MenuData";
 import { useState } from "react";
 
@@ -10,27 +10,34 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false)
     const StyleShowMenu = {
         right: showMenu ? '0%' : '-70%',
+        padding: "0",
+        marginTop: "80px",
         zIndex: '300',
         position: 'fixed',
         width: '70%',
-        height: '700px',
+        height: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: '40px',
+        fontSize: '2rem',
         color: 'white',
         flexDirection: 'column',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        visibility: 'visible',
         transition: 'all 0.5s ease'
     }
     return (
             <> 
-            <div style={StyleShowMenu} >
-               
-                 <h1 onClick={() => setShowMenu(prevShowMenu => !prevShowMenu )} >X</h1>
-                 <h3>пока не робе</h3>
-            </div>
+                    <div style={StyleShowMenu} >
+                    
+                    <CloseButton><h1 onClick={() => setShowMenu(prevShowMenu => !prevShowMenu )} >x</h1>
+                    </CloseButton>
+                    <MobileMenuList>
+                        {menuData.map((item, index) => (
+                            <NavLinkM to={item.link} key={index} >{item.title}</NavLinkM>
+                        ))}
+                    </MobileMenuList>
+                    
+                    </div>
+                
             
             <Nav>
                 
@@ -82,6 +89,16 @@ const NavLink = styled(Link)`
 
 
 `
+const NavLinkM = styled(Link)`
+
+    color: #fff ;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 1rem;
+
+
+`
 
 const Bars = styled(FaBars)`
     display: none;
@@ -108,5 +125,34 @@ const NavMenu = styled.div`
     @media screen and (max-width: 768px) {
         display: none;
     }
+
+`
+
+
+
+const CloseButton = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    padding-right: 10px;
+    top: 0;
+    width: 100%;
+
+`
+
+
+const MobileMenuList = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+`
+
+const MobileMenu = styled.div`
+
+    position: fixed;
+
 
 `
