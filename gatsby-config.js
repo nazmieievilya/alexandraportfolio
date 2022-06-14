@@ -3,11 +3,13 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    
+    "gatsby-plugin-root-import",
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,7 +25,5 @@ module.exports = {
         path: `./src/data/`,
       },
     },
-
-
   ],
-}
+};

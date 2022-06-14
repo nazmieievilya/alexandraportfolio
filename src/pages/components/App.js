@@ -1,12 +1,11 @@
-import React from 'react'
-import Header from './Header'
-import Home  from './Home'
-import Works from './Works'
-import Testimonials from  './Testimonials'
-import Contact from './Contact'
+import React from "react";
+import Header from "src/pages/components/Header";
+import Home from "src/pages/components/Home";
+import Works from "src/pages/components/Works";
+import Testimonials from "src/pages/components/Testimonials";
+import Contact from "src/pages/components/Contact";
 
 const App = () => {
-  
   return (
     <>
       <Header />
@@ -15,7 +14,7 @@ const App = () => {
       <Testimonials />
       <Contact />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

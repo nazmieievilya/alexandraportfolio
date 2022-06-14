@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
-
+import { colors } from 'data/colors'
 
 const Button = styled(Link)`
 
     background: ${({primary}) => (primary ? 'white' : 'black' )};
     white-space: nowrap;
     padding: ${ ({big}) => (big ? '16px 40px' : '16px 32px' ) };
-    color:  #fff;
+    color:  ${colors.white};
     font-size: ${ ({big}) => (big ? '20px' : '16px' ) };
     outline: none;
     border: none;
